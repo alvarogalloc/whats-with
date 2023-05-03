@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="nav">
       <div>
         <a class="nav-link" href="">Home</a>
         <a class="nav-link" href=" ">Latest States</a>
@@ -36,14 +36,32 @@
       </div>
     </nav>
     <div id="nav-activate"></div>
+    <div class="container md:hidden flex-end">
+      <button type="button" class="nav-toggle" onclick="openOverlay()">
+        <img src="./img/menu.svg" alt="Open Menu" />
+      
+      </button>
+    </div>
+    <div class="overlay">
+      <button type="button"  class="nav-toggle" onclick="closeOverlay()">
+        <img src="./img/close.svg" alt="Open Menu" />
+      </button>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Latest States</a></li>
+        <li><a href="">Create a State</a></li>
+        <li><a href="">Who are we?</a></li>
+        <li><a href="">FAQ</a></li>
+      </ul>
+    </div>
     <section class="center-child container">
       <div>
-        <h1>Say what's happening!</h1>
+        <h1>Say what's <br> happening!</h1>
         <h3 class="italic">
           shhh... no need to refrain yourself, say the truth.
         </h3>
       </div>
-      <div class="center-child hidden-on-mobile">
+      <div class="center-child md:block hidden">
         <img class="icon" src="./img/speaker.svg" alt="speaker" />
       </div>
     </section>
@@ -55,7 +73,7 @@
         <span class="italic color-secondary shadow">BBC, CBS, FOX</span> ??
       </h3>
       <p>That is what our team discussed and ran into this.</p>
-      <div class="center-child flex-row-on-mobile">
+      <div class="center-child  md:flex-row flex-col">
         <div>
           <p class="bold">Some things about the news right now:</p>
           <ul class="italic bold">

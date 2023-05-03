@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap");
 
 /* General */
-
+.md\:hidden {
+  display: none;
+}
+.md\:block {
+  display: block;
+}
 :root {
   --primary: #f7dba7;
   --secondary: #fa8072;
@@ -32,6 +37,7 @@ h1 {
   font-size: 72pt;
   color: var(--secondary);
   text-shadow: 4px 4px var(--text-alt);
+  margin: 15px 0;
 }
 .shadow {
   text-shadow: 2px 2px var(--text-alt);
@@ -65,12 +71,22 @@ img {
 
 body {
   background-color: var(--primary);
+  margin: 5px;
+  -ms-overflow-style: none; /* IE and Edge */
 }
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+a,
 a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: #000;
+  color: inherit;
+  font-family: inherit;
 }
 
 button {
@@ -84,12 +100,13 @@ button {
 /* General */
 
 /* Navigation */
-nav {
+.nav {
   display: flex;
+  margin-top: 5px;
   justify-content: space-between;
   /* always on top, when going down, put shadow*/
   position: sticky;
-  top: 0;
+  top: 5px;
   z-index: 1;
   background-color: var(--primary);
   margin-left: 13%;
@@ -102,7 +119,7 @@ nav {
   transition: box-shadow 0.1s ease-in-out;
 }
 
-nav > div {
+.nav > div {
   display: flex;
   gap: 20px;
 }
@@ -198,12 +215,87 @@ footer .row a i {
   footer .row a i {
     margin: 0% 3%;
   }
+  .nav {
+    display: none;
+  }
+  .container {
+    max-width: 90%;
+  }
 }
+
+/* Overlay Navbar */
+.nav-toggle {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary);
+  opacity: 0;
+  /*transparency and blurred background*/
+  overflow-x: hidden;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+.overlay-active {
+  opacity: 0.9;
+  width: 100%;
+}
+
+.overlay > button {
+  align-self: self-end;
+  margin: 5px 40px;
+  background-color: var(--primary);
+}
+.overlay > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20% 0;
+  gap: 30px;
+  height: inherit;
+}
+.overlay > ul > li {
+  font-family: "Abril Fatface", cursive;
+  list-style: none;
+  font-size: 35pt;
+  font-weight: bold;
+  color: var(--primary);
+  text-shadow: 2px 2px var(--alt);
+  transition: color 0.1s ease-in-out;
+}
+.overlay > ul > li:hover {
+  color: var(--text-alt);
+}
+/* Overlay Navbar */
+
 /* Footer */
 /* Utils */
+.no-scroll {
+  overflow: hidden;
+}
 .box-30 {
   width: 30px;
   height: 30px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .center-child {
@@ -253,18 +345,7 @@ footer .row a i {
   display: flex;
   flex-direction: column;
 }
-.hidden-on-mobile {
-  display: none;
-}
 
-@media (min-width: 720px) {
-  .flex-row-on-mobile {
-    flex-direction: row;
-  }
-  .hidden-on-mobile {
-    display: block;
-  }
-}
 /* Utils */
 
 /* Specific Components */
@@ -284,3 +365,27 @@ footer .row a i {
 }
 
 /* Specific Components */
+
+.md\:flex-col{
+  flex-direction: column;
+}
+.md\:flex-row{
+  flex-direction: row;
+}
+@media (max-width: 720px) {
+  h1 {
+    font-size: 48px;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .hidden {
+    display: none;
+  }
+  .block {
+    display: block;
+  }
+}
