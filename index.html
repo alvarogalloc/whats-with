@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Discover how the world is, explained by the world.</title>
     <link rel="stylesheet" href="style.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
@@ -36,14 +37,13 @@
       </div>
     </nav>
     <div id="nav-activate"></div>
-    <div class="container md:hidden flex-end">
+    <div class="container md:hidden flex flex-end">
       <button type="button" class="nav-toggle" onclick="openOverlay()">
         <img src="./img/menu.svg" alt="Open Menu" />
-      
       </button>
     </div>
     <div class="overlay">
-      <button type="button"  class="nav-toggle" onclick="closeOverlay()">
+      <button type="button" class="nav-toggle" onclick="closeOverlay()">
         <img src="./img/close.svg" alt="Open Menu" />
       </button>
       <ul>
@@ -56,7 +56,10 @@
     </div>
     <section class="center-child container">
       <div>
-        <h1>Say what's <br> happening!</h1>
+        <h1>
+          Say what's <br />
+          happening!
+        </h1>
         <h3 class="italic">
           shhh... no need to refrain yourself, say the truth.
         </h3>
@@ -73,7 +76,7 @@
         <span class="italic color-secondary shadow">BBC, CBS, FOX</span> ??
       </h3>
       <p>That is what our team discussed and ran into this.</p>
-      <div class="center-child  md:flex-row flex-col">
+      <div class="center-child md:flex-row flex-col">
         <div>
           <p class="bold">Some things about the news right now:</p>
           <ul class="italic bold">
@@ -120,7 +123,7 @@
     <hr class="dashed-separation" />
     <section class="container">
       <h3>Convinced?</h3>
-      <div class="grid-2cols">
+      <div class="flex flex-col md:flex-row">
         <div>
           <ul>
             <li>
