@@ -55,10 +55,10 @@ h1 {
   border-top: 1px solid;
   border-image: linear-gradient(to right, transparent, #fa8072, transparent) 1;
 }
-ol, ul {
+ol,
+ul {
   list-style-position: inside;
 }
-
 
 @media (max-width: 767px) {
   html {

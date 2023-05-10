@@ -375,7 +375,7 @@ footer .row a i {
   cursor: not-allowed;
 }
 input {
-/* Make a fit with the current style */
+  /* Make a fit with the current style */
   background-color: transparent;
   border: 4px solid transparent;
   border-radius: 20px;
@@ -396,7 +396,10 @@ input:focus {
   align-items: center;
 }
 .md\:space-around {
-  justify-content:space-around;
+  justify-content: space-around;
+}
+.hidden {
+  display: none;
 }
 @media (max-width: 720px) {
   h1 {
@@ -417,9 +420,9 @@ input:focus {
   .flex {
     display: flex;
   }
-.center-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

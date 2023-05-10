@@ -2,12 +2,11 @@ const APIKEY = "df1283dc605a42d1ae913243ff55e3ee";
 
 async function getLatestStates(topic) {
   // from news api
-  const country = await getcountryfromclient();
-  const response = await fetch(
+  const data = await fetch(
     `https://newsapi.org/v2/everything?q=${topic}&sortBy=popularity&apiKey=${APIKEY}&pageSize=3`
   );
-  const data = await response.json();
-  return data;
+  const jsondata = await data.json();
+  return jsondata.articles;
 }
 
 function createNewsCard(Title, Description, Image, Url) {
@@ -25,10 +24,39 @@ function createNewsCard(Title, Description, Image, Url) {
       <a href="${Url}" class="new__link" target="_blank">Read More</a>
     </div>
   `;
+  return new_tag;
+}
 
-  let news = document.querySelectorAll(".news");
-  for (let i = 0; i < news.length; i++) {
-    /*create 3 news in each with the topic data-topic*/
-    const articles = getLatestStates(news[i].dataset.topic);
-  }
+function makeNews(element) {
+  const articles = getLatestStates(element.dataset.topic);
+  articles.then((data) => {
+    data.forEach((article) => {
+      const new_tag = createNewsCard(
+        article.title,
+        article.description,
+        article.urlToImage,
+        article.url
+      );
+      element.appendChild(new_tag);
+    });
+  });
+}
+
+const searchbar = document.querySelector("#searchbar");
+searchbar.addEventListener("keypress", (e) => {
+  if (e.keyCode != 13) return;
+  const newNews = document.createElement("div");
+  newNews.classList.add("news");
+  newNews.dataset.topic = e.target.value;
+  newNews.innerHTML = `<h2 class="center">About ${e.target.value}</h2>`;
+  makeNews(newNews);
+  const newscontainer = document.querySelector(".news_container");
+  // put at the top
+  newscontainer.insertBefore(newNews, newscontainer.firstChild);
+});
+
+let news = document.querySelectorAll(".news");
+for (let i = 0; i < news.length; i++) {
+  /*create 3 news in each with the topic data-topic*/
+  makeNews(news[i]);
 }
