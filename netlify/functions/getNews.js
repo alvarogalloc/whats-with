@@ -8,5 +8,12 @@ exports.handler = async function (event, context) {
   const data = await fetch(
     `https://newsapi.org/v2/everything?q=${query}&sortBy=popularity&apiKey=${APIKEY}&pageSize=3`
   );
-  return await data.json()
+  let response = {
+    statusCode: 200,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  };
+  return response;
 };
