@@ -1,9 +1,8 @@
-const APIKEY = "df1283dc605a42d1ae913243ff55e3ee";
 
 async function getLatestStates(topic) {
   // from news api
   const data = await fetch(
-    `https://newsapi.org/v2/everything?q=${topic}&sortBy=popularity&apiKey=${APIKEY}&pageSize=3`
+    `./.netlify/functions/getNews?query=${topic}`
   );
   const jsondata = await data.json();
   return jsondata.articles;
