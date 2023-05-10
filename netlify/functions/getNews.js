@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 exports.handler = async function (event, context) {
   const APIKEY = "df1283dc605a42d1ae913243ff55e3ee";
   // your server-side functionality
