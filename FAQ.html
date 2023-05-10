@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="FAQ.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div>
+        <a class="nav-link" href="./">Home</a>
+        <a class="nav-link" href="latest-states.html">Latest States</a>
+        <!-- <a class="nav-link" href="">Create a State</a> -->
+      </div>
+      <div>
+        <a class="nav-link" href="who-are-we.html">Who are we?</a>
+        <a class="nav-link link-icon" href="./FAQ.html"
+          ><span>FAQ</span>
+          <svg
+            class="box-30 help-icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <div id="nav-activate"></div>
+    <div class="container md:hidden flex flex-end">
+      <button type="button" class="nav-toggle" onclick="openOverlay()">
+        <img src="./img/menu.svg" alt="Open Menu" />
+      </button>
+    </div>
+    <div class="overlay">
+      <button type="button" class="nav-toggle" onclick="closeOverlay()">
+        <img src="./img/close.svg" alt="Open Menu" />
+      </button>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="latest-states.html">Latest States</a></li>
+        <li><a href="who-are-we.html">Who are we?</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </div>
+    <section class="container">
+      <h1>Frequently asked questions</h1>
+      <div class="question">
+        <div class="question-item">
+          <div class="question-item-header">Can I cite the posts?</div>
+          <div class="question-item-body">
+            <div class="question-item-body-content">
+              <ol>
+                <li>
+                  Start your reference with the last name of the author followed
+                  by their initials. If there are multiple authors, separate
+                  their names with commas.
+                </li>
+                <li>List the year of publication in parentheses.</li>
+                <li>
+                  Type the title of the article in sentence case and italicize
+                  it.
+                </li>
+                <li>Add the name of the newspaper or website in title case.</li>
+                <li>
+                  Close with “Available at:” followed by the URL for the article
+                  and “Accessed:” followed by the date on which you accessed the
+                  website.
+                </li>
+              </ol>
+              <br />
+              <p class="italic">
+                For example: Celis Gallo, Santiago. (2023) Article that does not
+                exist. Altamiras Daily. Available at:
+                whats-with.com/dont-try-to-access-this (Accessed: 8 May 2023).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="question-item-header">
+            Why do we need to know about the other parts of the world?
+          </div>
+          <div class="question-item-body">
+            <div class="question-item-body-content">
+              <p>
+                As a global newspaper written by people from all over the world,
+                we believe it is important for our readers to know about other
+                parts of the world. By learning about events and issues in
+                different countries and regions, our readers can gain a broader
+                understanding of the world and the diverse perspectives and
+                experiences of people in other places. This knowledge can help
+                to promote empathy and understanding, challenge biases and
+                stereotypes, and foster a more connected global community.
+              </p>
+              <br />
+              <p>
+                Additionally, many issues and events have global implications
+                and impact, so being informed about what is happening in other
+                parts of the world can help our readers make more informed
+                decisions and engage more effectively as global citizens.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="question-item-header">
+            How do you handle plagiarism and fake news?
+          </div>
+          <div class="question-item-body">
+            <div class="question-item-body-content">
+              <p>
+                As a newspaper that accepts news from everyone while still being
+                committed to the integrity of data, we have measures in place to
+                ensure the accuracy and reliability of the information we
+                publish. All submissions are carefully reviewed and fact-checked
+                by our editorial team to verify their accuracy and authenticity.
+                We also have strict guidelines in place to prevent plagiarism
+                and the spread of fake news. By implementing these measures, we
+                strive to provide our readers with trustworthy and reliable
+                information while also giving a platform for diverse voices and
+                perspectives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <hr class="dashed-separation" />
+      <div class="row">
+        <ul>
+          <li><a class="nav-link" href="#">Contact us</a></li>
+          <li><a class="nav-link" href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <span class="bold"> "What's With" </span> © 2023 - All rights reserved
+        || Designed By: Santiago Celis Zamudio and Alvaro Gallo Cruz
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="FAQ.js"></script>
+  </body>
+</html>

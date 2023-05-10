@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 55pt;
+  color: var(--secondary);
+  text-shadow: 4px 4px var(--text-alt);
+}
+
+.question {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.question-item {
+  background-color: #424b54;
+  color: #ddd;
+  margin: 1rem 0;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.question-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.question-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.question-item-header.active::after {
+  content: "\2212";
+}
+.question-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.question-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #fa8072, transparent) 1;
+}
+ol, ul {
+  list-style-position: inside;
+}
+
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}

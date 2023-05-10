@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest States</title>
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="latest-states.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div>
+        <a class="nav-link" href="./">Home</a>
+        <a class="nav-link" href="#">Latest States</a>
+        <!-- <a class="nav-link" href="">Create a State</a> -->
+      </div>
+      <div>
+        <a class="nav-link" href="who-are-we.html">Who are we?</a>
+        <a class="nav-link link-icon" href="./FAQ.html"
+          ><span>FAQ</span>
+          <svg
+            class="box-30 help-icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <div id="nav-activate"></div>
+    <div class="container md:hidden flex flex-end">
+      <button type="button" class="nav-toggle" onclick="openOverlay()">
+        <img src="./img/menu.svg" alt="Open Menu" />
+      </button>
+    </div>
+    <div class="overlay">
+      <button type="button" class="nav-toggle" onclick="closeOverlay()">
+        <img src="./img/close.svg" alt="Open Menu" />
+      </button>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="latest-states.html">Latest States</a></li>
+        <li><a href="who-are-we.html">Who are we?</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </div>
+    <section class="container">
+      <h1>What's happening now??</h1>
+      <h2 class="center">About: SCJN Mexico Law</h2>
+      <div class="news" data-topic="WOKE"></div>
+    </section>
+
+    <br /><br />
+    <hr class="dashed-separation" />
+    <br /><br />
+
+    <section class="container">
+      <h2 class="center">About: WOKE Movement</h2>
+      <div class="news" data-topic="WOKE"></div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <hr class="dashed-separation" />
+      <div class="row">
+        <ul>
+          <li><a class="nav-link" href="#">Contact us</a></li>
+          <li><a class="nav-link" href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <span class="bold"> "What's With" </span> © 2023 - All rights reserved
+        || Designed By: Santiago Celis Zamudio and Alvaro Gallo Cruz
+      </div>
+    </footer>
+
+    <script src="latest-states.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Discover how the world is, explained by the world.</title>
+    <link rel="preload" href="style.css" as="style" />
+
     <link rel="stylesheet" href="style.css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -10,13 +12,13 @@
   <body>
     <nav class="nav">
       <div>
-        <a class="nav-link" href="">Home</a>
-        <a class="nav-link" href=" ">Latest States</a>
-        <a class="nav-link" href="">Create a State</a>
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="latest-states.html">Latest States</a>
+        <!-- <a class="nav-link" href="">Create a State</a> -->
       </div>
       <div>
-        <a class="nav-link" href="">Who are we?</a>
-        <a class="nav-link link-icon" href=""
+        <a class="nav-link" href="who-are-we.html">Who are we?</a>
+        <a class="nav-link link-icon" href="./FAQ.html"
           ><span>FAQ</span>
           <svg
             class="box-30 help-icon"
@@ -47,11 +49,10 @@
         <img src="./img/close.svg" alt="Open Menu" />
       </button>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Latest States</a></li>
-        <li><a href="">Create a State</a></li>
-        <li><a href="">Who are we?</a></li>
-        <li><a href="">FAQ</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="latest-states.html">Latest States</a></li>
+        <li><a href="who-are-we.html">Who are we?</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
       </ul>
     </div>
     <section class="center-child container">
@@ -123,7 +124,7 @@
     <hr class="dashed-separation" />
     <section class="container">
       <h3>Convinced?</h3>
-      <div class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex md:flex-row md:space-around">
         <div>
           <ul>
             <li>
@@ -148,13 +149,22 @@
             <span class="italic">everyday reality.</span>
           </h4>
           <br />
-          <button class="action-new-idea center-child" type="button">
-            <img
-              class="box-30"
-              src="./img/pencilbox.svg"
-              alt="create new state"
-            />Create New State
-          </button>
+          <form name="New user request" method="post" data-netlify="true">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              required
+            />
+            <input
+              id="submitbtn"
+              type="submit"
+              class="action-new-idea center-child"
+              value="Join now"
+            />
+          </form>
         </div>
       </div>
     </section>
