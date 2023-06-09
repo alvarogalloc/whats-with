@@ -1,9 +1,6 @@
-
 async function getLatestStates(topic) {
   // from news api
-  const data = await fetch(
-    `./.netlify/functions/getNews?query=${topic}`
-  );
+  const data = await fetch(`./.netlify/functions/getNews?query=${topic}`);
   const jsondata = await data.json();
   return jsondata.articles;
 }
